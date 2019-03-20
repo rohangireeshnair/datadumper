@@ -1,0 +1,30 @@
+<html>
+<table>
+                        <tr>
+                            <th>Country</th>
+                            <th>Description</th>
+                            <th>Designation</th>
+                            <th>Points</th>
+                            <th>Price</th>
+                            <th>Province</th>
+                            <th>region_1</th>
+                            <th>region_2</th>
+                            <th>Variety</th>
+                            <th>Winery</th>
+                        </tr>
+                        {% for item in results %}
+                        <tr>
+                            <td>{{ item.country }}</td>
+                            <td>{{ item.description }}</td>
+                            <td>{{ item.designation }}</td>
+                            <td>{{ item.points }}</td>
+                            <td>{{ item.price }}</td>
+                            <td>{{ item.province }}</td>
+                            <td>{{ item.region_1 }}</td>
+                            <td>{{ item.region_2 }}</td>
+                            <td>{{ item.variety }}</td>
+                            <td>{{ item.winery }}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>"
+</html>

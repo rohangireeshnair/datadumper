@@ -1,0 +1,53 @@
+<html>
+   <body>
+
+      <form name = "datafilter" action = "{% url "datadisplay" %}"
+         method = "POST" >{% csrf_token %}
+
+         <div align="center" style = "max-width:470px;margin-left:0%;" >
+            <center>
+                <h2>Choose your filter</h2>
+                <br>
+               <select name="filter" style="margin-left: 0%">
+                     <option value="" disabled selected>Choose your filter option</option>
+                     <option value="dispall">Display all</option>
+                     <option value="country">Country</option>
+                     <option value="winery">Winery</option>
+                     <option value="designation">Designation</option>
+                    <option value="province">Province</option>
+               </select>
+            </center>
+         </div>
+
+         <br>
+
+         <div style = "max-width:470px;">
+            <center>
+               <input type = "text" style = "margin-left:0%;"
+                  placeholder = "Enter the filter value" name = "value" />
+            </center>
+         </div>
+
+          <div>
+              <input type="checkbox" name="sortcheck" style="margin-left:12%;margin-top:2%"/>Sort by Price
+
+
+          </div>
+         <br>
+
+         <div style = "max-width:470px;">
+            <center>
+
+               <button style = "border:0px; background-color:#4285F4; margin-top:8%;
+                  height:35px; width:80%;margin-left:0%;" type = "submit"
+                  value = "check" >
+                  <strong>Check</strong>
+               </button>
+
+            </center>
+         </div>
+
+      </form>
+
+   </body>
+</html>

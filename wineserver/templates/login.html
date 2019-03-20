@@ -1,0 +1,61 @@
+<html>
+   <body>
+   <style>
+       h1 {
+           text-align: center;
+       }
+       h3 {
+           text-align: center;
+       }
+       #password {
+           text-align: center;
+       }
+
+       #user {
+           text-align: center;
+       }
+
+       #lbutton {
+           margin-left: 50%;
+       }
+
+   </style>
+      <form name = "form" action = "{% url "login" %}"
+         method = "POST" >{% csrf_token %}
+        <h1>Wine data Management system</h1>
+
+          <h3>Please login</h3>
+         <div style = "max-width:470px;">
+            <center>
+               <input id="user" type = "text" style = "margin-left:135%;"
+                  placeholder = "Enter UserName" name = "username" />
+            </center>
+         </div>
+
+         <br>
+
+         <div style = "max-width:470px;">
+            <center>
+               <input id="password" type = "password" style = "margin-left:135%;"
+                  placeholder = "Enter Password" name = "password" />
+            </center>
+         </div>
+
+         <br>
+
+         <div style = "max-width:470px;">
+            <center>
+
+               <button id="lbutton" style = "border:0px; background-color:#4285F4; margin-top:8%;
+                  height:35px; width:80%;margin-left:110%;" type = "submit"
+                  value = "Login" >
+                  <strong>Login</strong>
+               </button>
+
+            </center>
+         </div>
+
+      </form>
+
+   </body>
+</html>
